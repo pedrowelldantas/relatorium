@@ -16,7 +16,21 @@ Tudo é calculado no seu computador. Nada é enviado para lugar nenhum.
 
 Precisa do [Node.js](https://nodejs.org). Se ele não estiver instalado, ao rodar `/relatorium` o próprio Claude avisa e oferece instalar para você.
 
-No Claude Code (terminal), digite:
+### No app do Claude (desktop)
+
+O app não aceita `--marketplace` direto no install. Faça em dois passos, digitando no chat:
+
+```
+/plugin marketplace add pedrowelldantas/relatorium
+```
+
+```
+/plugin install relatorium@relatorium
+```
+
+Se o app ainda disser que não encontrou, use a opção **Pelas configurações**, mais abaixo.
+
+### No Claude Code de terminal
 
 ```
 /plugin install relatorium --marketplace pedrowelldantas/relatorium
@@ -41,6 +55,24 @@ claude plugin install relatorium --marketplace pedrowelldantas/relatorium --scop
 # só no projeto atual (rode dentro da pasta do projeto)
 claude plugin install relatorium --marketplace pedrowelldantas/relatorium --scope local
 ```
+
+### Pelas configurações (funciona em qualquer lugar)
+
+Acrescente isto ao arquivo de configurações e abra uma sessão nova:
+
+- **global:** `~/.claude/settings.json` (no Windows, `C:\Users\<você>\.claude\settings.json`)
+- **só no projeto:** `.claude/settings.local.json` dentro da pasta do projeto
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "relatorium": { "source": { "source": "github", "repo": "pedrowelldantas/relatorium" } }
+  },
+  "enabledPlugins": { "relatorium@relatorium": true }
+}
+```
+
+Se o arquivo já tiver conteúdo, junte essas duas chaves às que já existem, em vez de colar um segundo `{ }`.
 
 Para mudar de ideia depois, desinstale (`/plugin`, aba de instalados) e instale de novo no outro escopo.
 
