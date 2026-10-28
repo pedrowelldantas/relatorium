@@ -14,7 +14,7 @@ Tudo é calculado no seu computador. Nada é enviado para lugar nenhum.
 
 ## Instalar
 
-Precisa do [Node.js](https://nodejs.org) instalado.
+Precisa do [Node.js](https://nodejs.org). Se ele não estiver instalado, ao rodar `/relatorium` o próprio Claude avisa e oferece instalar para você.
 
 No Claude Code (terminal), digite:
 
