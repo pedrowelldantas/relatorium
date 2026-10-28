@@ -1,0 +1,14 @@
+{
+  "name": "relatorium",
+  "owner": {
+    "name": "pedrowelldantas"
+  },
+  "plugins": [
+    {
+      "name": "relatorium",
+      "source": "./",
+      "description": "Relatório gráfico do tempo e dos tokens gastos com o Claude no projeto aberto"
+    }
+  ],
+  "description": "Relatorium: relatório de tempo e tokens do Claude Code por projeto"
+}

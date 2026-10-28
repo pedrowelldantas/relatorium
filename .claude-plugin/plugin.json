@@ -1,0 +1,9 @@
+{
+  "name": "relatorium",
+  "version": "1.0.0",
+  "description": "/relatorium: relatório gráfico do tempo e dos tokens gastos com o Claude no projeto aberto",
+  "author": { "name": "pedrowelldantas" },
+  "homepage": "https://github.com/pedrowelldantas/relatorium",
+  "repository": "https://github.com/pedrowelldantas/relatorium",
+  "license": "MIT"
+}
