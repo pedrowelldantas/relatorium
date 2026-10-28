@@ -22,13 +22,27 @@ No Claude Code (terminal), digite:
 /plugin install relatorium --marketplace pedrowelldantas/relatorium
 ```
 
-Responda `y` para adicionar o marketplace e escolha o escopo **user** para ter o comando em todos os projetos.
+Responda `y` para adicionar o marketplace. Em seguida o Claude Code pergunta **onde instalar** (use as setas e Enter):
 
-Ou, de um terminal comum:
+| Escopo | Onde o `/relatorium` funciona |
+| --- | --- |
+| **user** (global) | Em todos os seus projetos do Claude Code. É o recomendado. |
+| **project** | Só no projeto atual, para todos que trabalham nele: fica gravado em `.claude/settings.json` do projeto, que vai junto no git. |
+| **local** | Só no projeto atual e só para você: fica em `.claude/settings.local.json`, que não vai para o git. |
+
+Ou, de um terminal comum, escolhendo o escopo com `--scope`:
 
 ```bash
-claude plugin install relatorium --marketplace pedrowelldantas/relatorium
+# global, para todos os projetos
+claude plugin install relatorium --marketplace pedrowelldantas/relatorium --scope user
 ```
+
+```bash
+# só no projeto atual (rode dentro da pasta do projeto)
+claude plugin install relatorium --marketplace pedrowelldantas/relatorium --scope local
+```
+
+Para mudar de ideia depois, desinstale (`/plugin`, aba de instalados) e instale de novo no outro escopo.
 
 ## Usar
 
